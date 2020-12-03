@@ -1,11 +1,23 @@
 import React from "react";
 import "./styles.css";
+import Home from "./components/Home/Home";
+import AddColor from "./components/AddColor/AddColor";
+import ShowColor from "./components/ShowColor/ShowColor";
+
+import { Route, Switch } from "react-router-dom";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <Switch>
+      <Route path="/" exact>
+        <Home />
+      </Route>
+      <Route path="/colors/new">
+        <AddColor />
+      </Route>
+      <Route path="/display_color/:colorId">
+        <ShowColor />
+      </Route>
+    </Switch>
   );
 }

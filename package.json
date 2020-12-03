@@ -1,12 +1,13 @@
 {
-  "name": "react-color-factory-app",
+  "name": "react-color-factory",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Color Factory app built for the Ekobitz React Router Exercise in the 'Intermediate React.js\" course",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "react": "17.0.0",
     "react-dom": "17.0.0",
+    "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3"
   },
   "devDependencies": {
