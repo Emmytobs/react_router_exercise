@@ -3,6 +3,8 @@ import { createPortal } from "react-dom";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../../context";
 
+import "./ShowColor.css";
+
 const ShowColor = () => {
   const { colorId } = useParams();
   const {
@@ -19,7 +21,10 @@ const ShowColor = () => {
 
   return (
     <div className="color-container" style={{ backgroundColor: color }}>
-      <p>Working</p>
+      <div>
+        <p>Click to copy code</p> {/** When code is copied, show "Copied!" **/}
+        <h1>{color}</h1>
+      </div>
     </div>
   );
 };

@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../context";
 import { useHistory } from "react-router-dom";
 
+import "./AddColor.css";
+
 export default function AddColor(props) {
   const [form, setForm] = React.useState({ colorName: "", colorValue: "" });
 
@@ -15,6 +17,9 @@ export default function AddColor(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!form.colorName || !form.colorValue) {
+      return;
+    }
     context.setState({
       ...context.state,
       colors: [...context.state.colors, form]
